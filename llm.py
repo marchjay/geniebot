@@ -121,9 +121,7 @@ class LLMClient:
             # Debug print of the assistant reply (length + snippet) for verification
             try:
                 print(f"--- ASSISTANT REPLY (len={len(text)}) ---")
-                # Print at most 500 chars to keep logs readable
-                preview = text if len(text) <= 500 else (text[:500] + "... [truncated]")
-                print(preview)
+                print(text)
                 print("--- END REPLY ---")
             except Exception:
                 pass
